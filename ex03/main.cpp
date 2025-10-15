@@ -1,24 +1,31 @@
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 #include "Weapon.hpp"
 int main ()
 {
-	weapon we("leen");// = new Weapon("ggggg");
-	// (void)we;
-	std::string s = we.getType();
-	std::cout << s << "\n";
+	Weapon we("leen");
+	std::cout << we.getType() << "\n";
 	we.setType("test it");
 	std::cout << we.getType() << "\n";
-	// std::string str = "HI THIS IS BRAIN";
-	// set
-	// std::string	*PTR = &str;
-	// std::string	&REF = str;
-
-	// std::cout << "The memory address of the string variable :" << &str << "\n";
-	// std::cout << "The memory address held by stringPTR :" << &PTR << "\n";
-	// std::cout << "The memory address held by stringREF :" << &REF << "\n";
-
-	// std::cout << "The value of the string variable: " << str << "\n";
-	// std::cout << "The value pointed to by stringPTR: " << *PTR << "\n";
-	// std::cout << "The value pointed to by stringPTR: " << REF << "\n";
-
+	HumanA A("bob",we);
+	A.attack();
+	HumanB B("jim");
+	std::cout << B.getname() << "\n";
+	B.set_Weapon(we);
+	B.attack();
+	we.setType("some other type of club");
+	std::cout << we.getType() << "\n";
+	B.attack();
+	// Weapon club = Weapon("crude spiked club");
+	// HumanA bob("Bob", club);
+	// bob.attack();
+	// club.setType("some other type of club");
+	// bob.attack();
+	// Weapon club_2 = Weapon("crude spiked club");
+	// HumanB jim("Jim");
+	// jim.set_Weapon(club_2);
+	// jim.attack();
+	// club_2.setType("some other type of club");
+	// jim.attack();
 	return (0);
 }

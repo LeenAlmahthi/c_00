@@ -1,8 +1,8 @@
 C = c++
 CFLAG =  -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC = main.cpp 
 OBJ = $(SRC:%.cpp=%.o)
-NAME = Weapon
+NAME = Replace
 $(NAME) : $(OBJ)
 	$(C) $(CFLAG) $(OBJ) -o $(NAME)
 %.o : %.cpp

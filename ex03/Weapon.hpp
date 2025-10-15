@@ -2,17 +2,17 @@
 #define WEAPON_HPP
 #include <iostream>
 
-class weapon{
+class Weapon{
 	private:
 		std::string type;
 	public:
-		weapon(){
+		Weapon(){
 			this->type = "test";
 		};
-		weapon(std::string str){
+		Weapon(std::string str){
 			this->type = str;
 		};
-		~weapon(){
+		~Weapon(){
 
 		};
 		void	setType(std::string s);
