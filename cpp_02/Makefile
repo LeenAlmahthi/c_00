@@ -1,8 +1,9 @@
 C = c++
-CFLAG =  -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp 
+CFLAG = -Wall -Wextra  -Werror -std=c++98  
+SRC = main.cpp Fixed.cpp
+NAME = Fixed 
 OBJ = $(SRC:%.cpp=%.o)
-NAME = Replace
+
 $(NAME) : $(OBJ)
 	$(C) $(CFLAG) $(OBJ) -o $(NAME)
 %.o : %.cpp
@@ -14,3 +15,6 @@ fclean: clean
 	rm -f $(NAME)
 re: fclean all 
 .PHONY : all re clean fclean 
+
+
+
