@@ -1,7 +1,7 @@
 C = c++
 CFLAG = -Wall -Wextra  -Werror -std=c++98  
-SRC = main.cpp Fixed.cpp
-NAME = Fixed 
+SRC = main.cpp ClapTrap.cpp
+NAME = ClapTrap
 OBJ = $(SRC:%.cpp=%.o)
 
 $(NAME) : $(OBJ)
@@ -14,7 +14,4 @@ clean:
 fclean: clean 
 	rm -f $(NAME)
 re: fclean all 
-.PHONY : all re clean fclean 
-
-
-
+.PHONY : all re clean fclean
