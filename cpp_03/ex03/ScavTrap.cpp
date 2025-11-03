@@ -12,12 +12,12 @@ ScavTrap::ScavTrap(std::string n) :ClapTrap(n){
     Hit_points = 100;
     Energy_points = 50;
     Attack_damage = 20;
-    std::cout << "[ScavTrap constructor Created] " << name << "\n";
+    std::cout << "[ScavTrap copy constructor Created] " << name << "\n";
 }
 
 ScavTrap::ScavTrap(ScavTrap const &tmp) :ClapTrap(tmp){
     *this = tmp; // this will call operator=
-    std::cout << "[ScavTrap Copy assignment Constructor] " << name << "\n";
+    std::cout << "[ScavTrap Copy assignment  Constructor] " << name << "\n";
 }
 
 ScavTrap::~ScavTrap(){
@@ -39,9 +39,9 @@ void ScavTrap::attack(const std::string& target){
     if (this->Energy_points <= 0 || this->Hit_points <= 0)
     {
         if (this->Energy_points <= 0)
-        std::cout << "ClapTrap: " << name << " cannot attack  it has no energy left!\n";
+            std::cout << "ClapTrap: " << name << " cannot attack  it has no energy left!\n";
         else 
-        std::cout << "ClapTrap: " << name << " cannot attack  it has no hit points!\n";
+            std::cout << "ClapTrap: " << name << " cannot attack  it has no hit points!\n";
         return;
     }
     this->Energy_points--;

@@ -17,7 +17,7 @@ ScavTrap::ScavTrap(std::string n) :ClapTrap(n){
 
 ScavTrap::ScavTrap(ScavTrap const &tmp) :ClapTrap(tmp){
     *this = tmp; // this will call operator=
-    std::cout << "[ScavTrap Copy assignment Constructor] " << name << "\n";
+    std::cout << "[ScavTrap Copy Constructor] " << name << "\n";
 }
 
 ScavTrap::~ScavTrap(){

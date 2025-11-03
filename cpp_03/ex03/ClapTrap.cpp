@@ -13,7 +13,7 @@ ClapTrap::ClapTrap(std::string name){
     Hit_points = 10;
     Energy_points = 10;
     Attack_damage = 0;
-    std::cout << "[ClapTrap constructor Created] " << name << "\n";
+    std::cout << "[ClapTrap copy constructor Created] " << name << "\n";
 }
 
 ClapTrap::ClapTrap(ClapTrap const &tmp){
