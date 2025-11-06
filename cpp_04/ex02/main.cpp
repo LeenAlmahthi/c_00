@@ -1,9 +1,8 @@
-
 #include "Cat.hpp"
 
 int main ()
 {
-    const Animal* meta = new Animal();
+    // const Animal* meta = new Animal();
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
@@ -12,9 +11,7 @@ int main ()
     
     j->makeSound();
     i->makeSound();
-    meta->makeSound();
 
-    delete meta;
     delete j;
     delete i;
     return (0);

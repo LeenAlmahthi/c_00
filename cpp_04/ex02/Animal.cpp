@@ -1,5 +1,4 @@
 #include "Animal.hpp"
-
 Animal::Animal(){
     type = "Animal";
     std::cout << "\n[Animal] Default constructor created\n";

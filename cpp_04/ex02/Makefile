@@ -1,7 +1,7 @@
 C = c++
 CFLAG = -Wall -Wextra  -Werror -std=c++98  
-SRC = main.cpp ClapTrap.cpp
-NAME = ClapTrap
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+NAME = Abstract
 OBJ = $(SRC:%.cpp=%.o)
 
 $(NAME) : $(OBJ)

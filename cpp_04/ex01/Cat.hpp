@@ -3,9 +3,12 @@
 
 #include "Animal.hpp"
 #include "Dog.hpp"
+#include "Brain.hpp"
 #include <iostream>
 
 class Cat :public Animal{
+    private:
+        Brain *brain;
     public :
         Cat();
         Cat(std::string type);
@@ -14,5 +17,7 @@ class Cat :public Animal{
         Cat &operator=(const Cat &tmp);
         virtual void makeSound() const;
         std::string getType() const;
+        std::string getideas(int i) const;
+        void setIdea(int i,std::string name);
 };
 #endif

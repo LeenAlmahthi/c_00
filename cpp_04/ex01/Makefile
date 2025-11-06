@@ -1,8 +1,9 @@
 C = c++
 CFLAG = -Wall -Wextra  -Werror -std=c++98  
-SRC = main.cpp ClapTrap.cpp FragTrap.cpp
-NAME = FragTrap
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+NAME = Brain
 OBJ = $(SRC:%.cpp=%.o)
+
 $(NAME) : $(OBJ)
 	$(C) $(CFLAG) $(OBJ) -o $(NAME)
 %.o : %.cpp

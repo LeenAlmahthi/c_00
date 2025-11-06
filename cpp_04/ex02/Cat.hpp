@@ -3,9 +3,12 @@
 
 #include "Animal.hpp"
 #include "Dog.hpp"
+#include "Brain.hpp"
 #include <iostream>
 
 class Cat :public Animal{
+    private:
+        Brain *brain;
     public :
         Cat();
         Cat(std::string type);
